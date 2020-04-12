@@ -1,8 +1,8 @@
 ---
 layout: about
 permalink: /
-title: <strong>Fergus</strong> Cullen
-description: <a href="">Institute for Astronomy</a>. Royal Observatory, Edinburgh
+title: Fergus Cullen
+description: <a href="">Institute for Astronomy, Royal Observatory, Edinburgh</a>
 
 profile:
   align: right
