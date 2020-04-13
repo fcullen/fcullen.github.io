@@ -77,7 +77,7 @@ $background-color:  white;
 
 // Links
 $link-color:        $blue;
-$link-hover-color:  darken($theme-color, 40%);
+$link-hover-color:  darken($blue, 40%);
 
 // Breakpoints
 $breakpoint-md: '(min-width: 52em)';
@@ -156,7 +156,7 @@ $footer-font-size: .85rem;
 
 /* portfolio tinkering */
 $img_spacing: 5px;
-$img-height: 275px;
+$img-height: 300px;
 $caption-font-size: 12px;
 $caption-color: #aaa;
 
