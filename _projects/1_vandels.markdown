@@ -28,7 +28,7 @@ I'm trying to maintain an [ADS library](https://ui.adsabs.harvard.edu/abs/2020ar
 Below are some links to potentially useful data (feel free to contact me if you have any questions).
 
 <div>
-<a class="page-link" href="{{ '/assets/tar/fc2019_vandels_stellar_mass_composites.tar.gz' | prepend: site.baseurl | prepend: site.url }}"> -- Stellar mass stacks from Cullen et al. (2019)</a>
+<a class="page-link" href="{{/assets/tars/fc2019_vandels_stellar_mass_composites.tar.gz' | prepend: site.baseurl | prepend: site.url }}"> -- Stellar mass stacks from Cullen et al. (2019)</a>
 </div>  
 
 ---
