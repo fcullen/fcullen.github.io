@@ -1,14 +1,14 @@
 .project {
     box-sizing: border-box;
     float: left;
-    height: 250px;
+    height: 150px;
     padding: 10px;
     vertical-align: middle;
-    width: 33.33%;
+    width: 100%;
 
     .thumbnail {
         overflow: hidden;
-        height: 200px;
+        height: 120px;
         width: 100%;
         border: 1px solid #666;
 
@@ -18,7 +18,7 @@
 
         a {
             float: left;
-            height: 230px;
+            height: 120px;
             position: relative;
             width: 100%;
 
@@ -31,7 +31,7 @@
                 right: 0;
                 background: #fff;
                 color: #333;
-                padding: 40px;
+                padding: 20px;
                 text-align: center;
 
                 h1 {
