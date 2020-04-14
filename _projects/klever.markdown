@@ -18,4 +18,4 @@ This dataset will enable a detailed, spatially-resolved, investigation of the ph
 
 ---
 
-This [ADS query](https://ui.adsabs.harvard.edu/search/q=%20abs%3A%22KLEVER%22%20title%3A%22KLEVER%22%20%20abs%3A%22KMOS%22&sort=date%20desc%2C%20bibcode%20desc&p_=0) should be a fairly complete list of all KLEVER-related papers.
+This [ADS query](https://ui.adsabs.harvard.edu/search/q=%20abs%3A%22KLEVER%22%20title%3A%22KLEVER%22%20%20abs%3A%22KMOS%22&sort=date%20desc%2C%20bibcode%20desc&p_=0) gives an up-to-date list of all KLEVER-related papers.
