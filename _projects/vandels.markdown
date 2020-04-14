@@ -5,7 +5,6 @@ description: Ultra-deep optical spectroscopy of galaxies at z>1.0
 img:
 ---
 
-I am and active member of the VANDELS collaboration.
 [VANDELS](http://vandels.inaf.it/) is a ESO public spectroscopic survey targeting roughly 2500 galaxies at z > 1 in the CDFS and UDS survey fields.
 The two primary targets were star-forming at z > 2.5 and passive galaxies at 1.0 < z < 1.5.
 Observations were taken with the VIMOS spectrograph on the VLT, providing medium resolution (R=580) optical spectra at 0.48 - 1.0 &mu;m (covering the rest-frame UV spectra of the VANDELS galaxies).
