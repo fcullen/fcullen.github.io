@@ -21,7 +21,7 @@ With individual integration times of up to 80 hours on source, VANDELS is one of
 You can find my VANDELS papers on the stellar metallicities of star-forming galaxies at z > 2.5 [here](https://ui.adsabs.harvard.edu/abs/2019MNRAS.487.2038C/abstract) and [here](https://ui.adsabs.harvard.edu/abs/2020arXiv200111063C/abstract).
 I've also done some work on constraining the average shape of the dust attenuation curve at high-redshift which you can find [here](https://ui.adsabs.harvard.edu/abs/2018MNRAS.476.3218C/abstract).
 
-I'm trying to maintain an [ADS library](https://ui.adsabs.harvard.edu/abs/2020arXiv200111063C/abstract) of all VANDELS-related papers - let me know if anything is missing!
+This [ADS query](https://ui.adsabs.harvard.edu/search/q=%20abs%3A%22VANDELS%22%20title%3A%22VANDELS%22&sort=date%20desc%2C%20bibcode%20desc&p_=0) should be a fairly complete list of all VANDELS-related papers.
 
 ---
 
