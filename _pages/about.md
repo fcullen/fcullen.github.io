@@ -8,7 +8,7 @@ profile:
   align: center
   image:
 
-news: false
+news: true
 social: true
 ---
 

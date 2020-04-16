@@ -1,6 +1,7 @@
 ---
 layout: page
 title: KLEVER
+permalink: /projects/klever
 description: Spatially resolved near-IR spectroscopy with KMOS
 img:
 ---

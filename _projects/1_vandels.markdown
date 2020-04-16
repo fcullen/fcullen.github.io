@@ -1,6 +1,7 @@
 ---
 layout: page
 title: VANDELS
+permalink: /projects/vandels
 description: Ultra-deep optical spectroscopy of galaxies at z>1.0
 img:
 ---
@@ -21,14 +22,6 @@ You can find my VANDELS papers on the stellar metallicities of star-forming gala
 I've also done some work on constraining the average shape of the dust attenuation curve at high-redshift which you can find [here](https://ui.adsabs.harvard.edu/abs/2018MNRAS.476.3218C/abstract).
 
 This [ADS query](https://ui.adsabs.harvard.edu/search/q=%20abs%3A%22VANDELS%22%20title%3A%22VANDELS%22&sort=date%20desc%2C%20bibcode%20desc&p_=0) gives an up-to-date list of all VANDELS-related papers.
-
----
-
-Below are some links to potentially useful data (feel free to contact me if you have any questions).
-
-<div>
-<a class="page-link" href="{{ '/assets/tars/fc2019_vandels_stellar_mass_composites.tar.gz' | prepend: site.baseurl | prepend: site.url }}"> -- Stellar mass composites from Cullen et al. (2019)</a>
-</div>  
 
 ---
 
