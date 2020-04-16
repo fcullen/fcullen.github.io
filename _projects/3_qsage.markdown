@@ -1,6 +1,6 @@
 ---
 layout: page
-title: QSAGE
+title: qsage
 permalink: /projects/qsage
 description: HST WFC3 grism observations of 12 QSO fields
 img:

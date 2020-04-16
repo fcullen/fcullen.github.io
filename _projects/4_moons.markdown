@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MOONS
+title: moons
 permalink: /projects/moons
 description: Multi-object optical and near-IR spectrograph
 img:

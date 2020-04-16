@@ -1,6 +1,6 @@
 ---
 layout: page
-title: VANDELS
+title: vandels
 permalink: /projects/vandels
 description: Ultra-deep optical spectroscopy of galaxies at z>1.0
 img:
