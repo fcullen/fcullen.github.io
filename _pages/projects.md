@@ -28,7 +28,7 @@ description: Currently active research projects.
 
 <div class="project">
         <a href="{{ project.url | prepend: site.baseurl | prepend: site.url }}">    
-        <span><p><font color="#009f06"><strong>{{ project.title }}</strong></font>: <font color="#666" size="2">{{ project.description }}</font></p></span>
+        <span><p><font color="#53744E"><strong>{{ project.title }}</strong></font>: <font color="#666" size="2">{{ project.description }}</font></p></span>
         </a>
 </div>
 
