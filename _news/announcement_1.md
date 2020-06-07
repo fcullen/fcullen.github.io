@@ -1,8 +1,0 @@
----
-layout: post
-date: 2020-04-16 15:59:00-0400
-inline: true
----
-
-My recent [paper](https://ui.adsabs.harvard.edu/abs/2020arXiv200111063C/abstract) on the stellar metallicities of Ly&alpha; emitting galaxies at 3 < z < 5 has been accepted for publication in MNRAS.
-We present evidence for a strong correlation betwen stellar metallicity and the strength of the observed Ly&alpha; emission.
