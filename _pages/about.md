@@ -5,8 +5,8 @@ title: Fergus Cullen
 description: <a href="">Institute for Astronomy, Royal Observatory, Edinburgh</a>
 
 profile:
-  align: center
-  image:
+  align: right
+  image: ferg.jpg
 
 news: true
 social: true
