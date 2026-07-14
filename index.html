@@ -13,6 +13,7 @@
     --accent: #c96f4a;
     --accent-soft: #e8c9a0;
     --line: #d8cdb8;
+    --navy: #2d3f5e;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -370,30 +371,8 @@
   .data-item:first-child{
     border-top: 1px solid var(--line);
   }
-  .data-title{
-    display:inline-flex;
-    align-items:center;
-    font-weight:600;
-    font-size: 1rem;
-    color: var(--ink);
-    text-decoration:none;
-    transition: color 0.15s ease;
-  }
-  .data-title:hover{color: var(--accent);}
-  .data-title::after{
-    content:"→";
-    display:inline-block;
-    margin-left:8px;
-    opacity:0;
-    transform: translateX(-3px);
-    transition: all 0.15s ease;
-  }
-  .data-title:hover::after{
-    opacity:1;
-    transform: translateX(0);
-  }
   .data-desc{
-    margin: 6px 0 0;
+    margin: 0;
     font-size: 0.88rem;
     color: var(--ink-soft);
     line-height:1.55;
@@ -405,6 +384,14 @@
   }
   .data-desc a:hover{
     text-decoration-color: var(--accent);
+  }
+  .data-desc a.data-link{
+    color: var(--navy);
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .data-desc a.data-link:hover{
+    color: var(--accent);
   }
 
   footer{
@@ -510,8 +497,10 @@
     <p style="font-size:0.96rem; color:var(--ink-soft); margin:0 0 16px;">Curated datasets from my published work, made available for reuse.</p>
     <div class="data-list">
       <div class="data-item">
-        <a class="data-title" href="assets/fc2019_vandels_stellar_mass_composites.tar.gz" download>VANDELS FUV stacked spectra (stellar mass)</a>
-        <p class="data-desc">Seven stacked FUV spectra of star-forming galaxies at 2.5 &lt; z &lt; 5.5 from <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487.2038C/abstract" target="_blank" rel="noopener">Cullen et al. (2019)</a>. Stacked in bins of stellar mass (see Table 1 of Cullen et al. 2019 for details).</p>
+        <p class="data-desc"><a class="data-link" href="assets/fc2019_vandels_stellar_mass_composites.tar.gz" download>VANDELS FUV M<sub>*</sub> stacked spectra</a> — Rest-frame FUV composite spectra of star-forming galaxies at 2.5 &lt; z &lt; 5.5 from <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487.2038C/abstract" target="_blank" rel="noopener">Cullen et al. (2019)</a>. Stacked in seven  stellar mass bins (see Table 1 of Cullen et al. 2019).</p>
+      </div>
+      <div class="data-item">
+        <p class="data-desc"><a class="data-link" href="assets/fc2020_vandels_lya_composites.tar.gz" download>VANDELS FUV Lyα stacked spectra</a> — Rest-frame FUV composite spectra of star-forming galaxies at 2.5 &lt; z &lt; 5.5 from <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.495.1501C/abstract" target="_blank" rel="noopener">Cullen et al. (2020)</a>. Stacked in bins of Lyα equivalent width (see Cullen et al. 2020).</p>
       </div>
     </div>
   </section>
