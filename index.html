@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fergus Cullen — Galaxy Evolution, University of Edinburgh</title>
+<meta name="description" content="Fergus Cullen, Reader in Galaxy Evolution at the University of Edinburgh. Research on the chemical evolution of galaxies, metal-poor stellar populations, and the first galaxies.">
+<style>
+  :root{
+    --paper: #f6f1e7;
+    --ink: #1b2430;
+    --ink-soft: #4a5568;
+    --accent: #c96f4a;
+    --accent-soft: #e8c9a0;
+    --line: #d8cdb8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height:1.6;
+  }
+  a{color:inherit;}
+
+  /* Top band */
+  header.hero{
+    background:
+      linear-gradient(180deg, rgba(8,12,22,0.72) 0%, rgba(8,12,22,0.55) 45%, rgba(8,12,22,0.88) 100%),
+      url("https://cdn.esawebb.org/archives/images/wallpaper4/weic2209a.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #f3ede0;
+    position: relative;
+    overflow: hidden;
+    padding: 72px 24px 88px;
+  }
+  .hero-inner{
+    position:relative;
+    max-width: 760px;
+    margin: 0 auto;
+    display:flex;
+    align-items:center;
+    gap: 28px;
+  }
+  .avatar{
+    flex: none;
+    width: 162px;
+    height: 162px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(232,201,160,0.55);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+  }
+  .hero-text{min-width:0;}
+  .image-credit{
+    position:absolute;
+    right: 16px;
+    bottom: 12px;
+    margin: 0;
+    text-align:right;
+    font-size:0.68rem;
+    color: rgba(243,237,224,0.55);
+  }
+  .image-credit a{
+    color: rgba(243,237,224,0.7);
+  }
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:0.18em;
+    font-size:0.72rem;
+    color: var(--accent-soft);
+    margin: 0 0 18px;
+    font-weight:600;
+  }
+  h1.name{
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+    margin: 0 0 10px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  p.role{
+    font-size: 1.1rem;
+    color: #cdd6e4;
+    margin: 0 0 6px;
+  }
+  p.affil{
+    font-size: 0.95rem;
+    color: #9aa7bb;
+    margin: 0;
+  }
+
+  main{
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 56px 24px 100px;
+  }
+
+  /* Persistent left-hand section nav, shown once viewport has room */
+  nav.side-nav{
+    display:none;
+  }
+  @media (min-width: 1150px){
+    nav.side-nav{
+      display:flex;
+      flex-direction:column;
+      gap: 20px;
+      position: fixed;
+      left: 44px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 40;
+    }
+    nav.side-nav a{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      text-decoration:none;
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--ink-soft);
+      transition: color 0.15s ease;
+    }
+    nav.side-nav a::before{
+      content:"";
+      width: 18px;
+      height: 1px;
+      background: var(--ink-soft);
+      transition: all 0.2s ease;
+    }
+    nav.side-nav a:hover,
+    nav.side-nav a.active{
+      color: var(--accent);
+    }
+    nav.side-nav a:hover::before,
+    nav.side-nav a.active::before{
+      width: 30px;
+      background: var(--accent);
+    }
+  }
+
+  section{margin-bottom: 64px;}
+  section h2{
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-weight:400;
+    font-size: 1.5rem;
+    margin: 0 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+    display:inline-block;
+  }
+
+  .intro p{
+    font-size: 1.05rem;
+    color: var(--ink);
+    margin: 0 0 18px;
+  }
+  .intro p:last-child{margin-bottom:0;}
+  .intro p a{
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: rgba(201,111,74,0.4);
+  }
+  .intro p a:hover{
+    text-decoration-color: var(--accent);
+  }
+
+  .interests{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .interests > li{
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.96rem;
+    color: var(--ink-soft);
+  }
+  .interests > li:first-child{
+    padding-top: 6px;
+  }
+  .interests > li strong{
+    display:block;
+    color: var(--ink);
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .interest-note{
+    margin: 10px 0 8px;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+  }
+  .interest-note a{
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: rgba(201,111,74,0.4);
+  }
+  .interest-note a:hover{
+    text-decoration-color: var(--accent);
+  }
+  .paper-list{
+    list-style:none;
+    margin: 8px 0 0;
+    padding:0;
+    display:flex;
+    flex-direction:column;
+    gap: 8px;
+  }
+  .paper-list li{
+    position:relative;
+    padding-left: 14px;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    line-height:1.5;
+  }
+  .paper-list li::before{
+    content:"–";
+    position:absolute;
+    left:0;
+    color: var(--accent);
+  }
+  .paper-list a{
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: rgba(201,111,74,0.4);
+  }
+  .paper-list a:hover{
+    color: #a8502e;
+    text-decoration-color: #a8502e;
+  }
+
+  .link-grid{
+    display:flex;
+    flex-direction:column;
+  }
+  .link-card{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap: 16px;
+    padding: 14px 2px;
+    border-bottom: 1px solid var(--line);
+    text-decoration:none;
+    transition: border-color 0.15s ease;
+  }
+  .link-card:first-child{
+    border-top: 1px solid var(--line);
+  }
+  .link-card:hover{
+    border-bottom-color: var(--accent);
+  }
+  .link-card:hover .label{
+    color: var(--accent);
+  }
+  .link-card:hover .label::after{
+    transform: translateX(3px);
+    opacity:1;
+  }
+  .link-card .label{
+    font-weight:500;
+    font-size: 1rem;
+    color: var(--ink);
+    transition: color 0.15s ease;
+    white-space:nowrap;
+  }
+  .link-card .label::after{
+    content:"→";
+    display:inline-block;
+    margin-left:8px;
+    opacity:0;
+    transition: all 0.15s ease;
+  }
+  .link-card .sub{
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    text-align:right;
+  }
+
+  .pub-row{
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap: 16px;
+    padding: 14px 2px;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .pub-row .label{
+    font-weight:500;
+    font-size: 1rem;
+    color: var(--ink);
+    white-space:nowrap;
+  }
+  .pub-row .sub-links{
+    display:flex;
+    align-items:baseline;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    white-space:nowrap;
+  }
+  .pub-row .sub-links a{
+    color: var(--ink-soft);
+    text-decoration:none;
+    transition: color 0.15s ease;
+  }
+  .pub-row .sub-links a:hover{
+    color: var(--accent);
+    text-decoration: underline;
+  }
+  .pub-row .sub-links .sep{
+    color: var(--line);
+  }
+
+  .placeholder-note{
+    font-size: 0.92rem;
+    font-style: italic;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  .subheading{
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+  h2 + .subheading{
+    margin-top: 4px;
+  }
+  .group-list{
+    list-style:none;
+    margin: 0 0 32px;
+    padding: 0;
+    display:flex;
+    flex-direction:column;
+    gap: 8px;
+  }
+  .group-list li{
+    font-size: 0.96rem;
+    color: var(--ink-soft);
+  }
+  .group-list a{
+    color: var(--ink);
+    text-decoration: underline;
+    text-decoration-color: rgba(201,111,74,0.35);
+  }
+  .group-list a:hover{
+    color: var(--accent);
+    text-decoration-color: var(--accent);
+  }
+
+  .data-list{
+    display:flex;
+    flex-direction:column;
+  }
+  .data-item{
+    padding: 16px 2px;
+    border-bottom: 1px solid var(--line);
+  }
+  .data-item:first-child{
+    border-top: 1px solid var(--line);
+  }
+  .data-title{
+    display:inline-flex;
+    align-items:center;
+    font-weight:600;
+    font-size: 1rem;
+    color: var(--ink);
+    text-decoration:none;
+    transition: color 0.15s ease;
+  }
+  .data-title:hover{color: var(--accent);}
+  .data-title::after{
+    content:"→";
+    display:inline-block;
+    margin-left:8px;
+    opacity:0;
+    transform: translateX(-3px);
+    transition: all 0.15s ease;
+  }
+  .data-title:hover::after{
+    opacity:1;
+    transform: translateX(0);
+  }
+  .data-desc{
+    margin: 6px 0 0;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    line-height:1.55;
+  }
+  .data-desc a{
+    color: var(--accent);
+    text-decoration: underline;
+    text-decoration-color: rgba(201,111,74,0.4);
+  }
+  .data-desc a:hover{
+    text-decoration-color: var(--accent);
+  }
+
+  footer{
+    max-width:760px;
+    margin: 0 auto;
+    padding: 0 24px 60px;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+  }
+
+  @media (max-width: 600px){
+    header.hero{padding: 56px 20px 70px;}
+    main{padding: 44px 20px 80px;}
+    .hero-inner{flex-direction:column; align-items:flex-start; gap:20px;}
+    .avatar{width:132px; height:132px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <img class="avatar" src="assets/fergus-avatar.jpg" alt="Portrait of Fergus Cullen">
+    <div class="hero-text">
+      <p class="eyebrow">Institute for Astronomy · University of Edinburgh</p>
+      <h1 class="name">Fergus Cullen</h1>
+      <p class="role">Reader in Galaxy Evolution</p>
+      <p class="affil">School of Physics &amp; Astronomy, Royal Observatory Edinburgh</p>
+    </div>
+  </div>
+  <p class="image-credit">Webb's First Deep Field, SMACS 0723 — <a href="https://esawebb.org/images/weic2209a/" target="_blank" rel="noopener">NASA, ESA, CSA, STScI</a></p>
+</header>
+
+<nav class="side-nav" aria-label="Section navigation">
+  <a href="#about">About</a>
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="#data">Data</a>
+  <a href="#group">Research Group</a>
+  <a href="#studentships">Studentships &amp; Fellowships</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+  <section class="intro" id="about">
+    <h2>About</h2>
+    <p>I am a Reader (Associate Professor) in Galaxy Evolution at the University of Edinburgh, based at the <a href="https://ifa.roe.ac.uk/" target="_blank" rel="noopener">Institute for Astronomy</a>. My work focuses on the chemical evolution of galaxies across cosmic time, the properties of metal-poor stellar populations, and the search for — and characterisation of — the first galaxies.</p>
+    <p>I use a combination of imaging and spectroscopic surveys, including data from JWST, to trace how galaxies form, enrich their gas with heavy elements, and evolve from the earliest epochs of the Universe to the present day.</p>
+  </section>
+
+  <section id="research">
+    <h2>Research interests</h2>
+    <ul class="interests">
+      <li>
+        <strong>Chemical evolution</strong>
+        <p class="interest-note">Our group is interested in studying the chemical enrichment of galaxies across cosmic time in order to understand their star-formation histories and help to constrain the key physical processes of the galaxy baryon cycle. Some of our most recent papers:</p>
+        <ul class="paper-list">
+          <li><a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260102463S/abstract" target="_blank" rel="noopener">Electron temperature relations and the direct N, O, Ne, S and Ar abundances of 49,959 star-forming galaxies in DESI Data Release 2</a> — Scholte et al. (2026)</li>
+          <li><a href="https://ui.adsabs.harvard.edu/abs/2025MNRAS.540.2991A/abstract" target="_blank" rel="noopener">The JWST EXCELS survey: direct estimates of C, N, and O abundances in two relatively metal-rich galaxies at z ≃ 5</a> — Arellano-Córdova et al. (2025)</li>
+          <li><a href="https://ui.adsabs.harvard.edu/abs/2026MNRAS.547ag449S/abstract" target="_blank" rel="noopener">The JWST EXCELS Survey: gas-phase metallicity evolution at 2 &lt; z &lt; 8</a> — Stanton et al. (2026)</li>
+        </ul>
+      </li>
+      <li>
+        <strong>Metal-poor stellar populations</strong>
+        <p class="interest-note">Understanding the properties of the massive stars that formed in the extremely metal-poor environments of the early Universe is crucial for understanding the chemical enrichment of the first galaxies, early stellar feedback processes, and the process of reionization. Our group uses deep JWST spectroscopy to constrain the properties of the earliest massive stellar populations.</p>
+        <ul class="paper-list">
+          <li><a href="https://ui.adsabs.harvard.edu/abs/2025MNRAS.540.2176C/abstract" target="_blank" rel="noopener">The JWST EXCELS survey: an extremely metal-poor galaxy at z = 8.271 hosting an unusual population of massive stars</a> — Cullen et al. (2025)</li>
+        </ul>
+      </li>
+      <li>
+        <strong>The first galaxies</strong>
+        <p class="interest-note">The launch of JWST has pushed the redshift frontier of galaxy evolution out to z=15. Our group is heavily involved in the search for — and characterisation of — galaxies at the earliest cosmic epochs.</p>
+        <ul class="paper-list">
+          <li><a href="https://ui.adsabs.harvard.edu/abs/2023MNRAS.520...14C/abstract" target="_blank" rel="noopener">The ultraviolet continuum slopes (β) of galaxies at z ≃ 8–16 from JWST and ground-based near-infrared imaging</a> — Cullen et al. (2023)</li>
+          <li><a href="https://ui.adsabs.harvard.edu/abs/2024MNRAS.531..997C/abstract" target="_blank" rel="noopener">The ultraviolet continuum slopes of high-redshift galaxies: evidence for the emergence of dust-free stellar populations at z &gt; 10</a> — Cullen et al. (2024)</li>
+          <li><a href="https://ui.adsabs.harvard.edu/abs/2026arXiv260416666M/abstract" target="_blank" rel="noopener">A search for the first galaxies across &gt;0.6 deg² of JWST imaging: new evidence for a rapid decline in star-formation activity at z &gt; 12</a> — McLeod et al. (2026)</li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="link-grid">
+      <div class="pub-row">
+        <span class="label">ADS</span>
+        <span class="sub-links">
+          <a href="https://ui.adsabs.harvard.edu/search/filter_bibstem_facet_fq_bibstem_facet=AND&filter_bibstem_facet_fq_bibstem_facet=bibstem_facet%3A%22MNRAS%22&fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq=%7B!type%3Daqp%20v%3D%24fq_bibstem_facet%7D&fq_bibstem_facet=(bibstem_facet%3A%22MNRAS%22)&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&p_=0&q=%20%20first_author%3A%22Cullen%2C%20F%22&sort=date%20desc%2C%20bibcode%20desc" target="_blank" rel="noopener">First Author</a>
+          <span class="sep">·</span>
+          <a href="https://ui.adsabs.harvard.edu/search/fq=%7B!type%3Daqp%20v%3D%24fq_database%7D&fq=%7B!type%3Daqp%20v%3D%24fq_bibstem_facet%7D&fq_bibstem_facet=(bibstem_facet%3A%22MNRAS%22%20OR%20bibstem_facet%3A%22A%26A%22%20OR%20bibstem_facet%3A%22arXiv%22%20OR%20bibstem_facet%3A%22ApJ%22%20OR%20bibstem_facet%3A%22ApJL%22%20OR%20bibstem_facet%3A%22Natur%22%20OR%20bibstem_facet%3A%22MNRAS.tmp%22)&fq_database=(database%3Aastronomy%20OR%20database%3Aphysics)&p_=0&q=%20%20author%3A%22cullen%2C%20fergus%22&sort=date%20desc%2C%20bibcode%20desc" target="_blank" rel="noopener">All</a>
+        </span>
+      </div>
+      <a class="link-card" href="https://scholar.google.com/citations?user=o0z1qgQAAAAJ&hl=en" target="_blank" rel="noopener">
+        <span class="label">Google Scholar</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="data">
+    <h2>Data</h2>
+    <p style="font-size:0.96rem; color:var(--ink-soft); margin:0 0 16px;">Curated datasets from my published work, made available for reuse.</p>
+    <div class="data-list">
+      <div class="data-item">
+        <a class="data-title" href="assets/fc2019_vandels_stellar_mass_composites.tar.gz" download>VANDELS FUV stacked spectra (stellar mass)</a>
+        <p class="data-desc">Seven stacked FUV spectra of star-forming galaxies at 2.5 &lt; z &lt; 5.5 from <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487.2038C/abstract" target="_blank" rel="noopener">Cullen et al. (2019)</a>. Stacked in bins of stellar mass (see Table 1 of Cullen et al. 2019 for details).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="group">
+    <h2>Research Group</h2>
+    <h3 class="subheading">Current</h3>
+    <ul class="group-list">
+      <li><a href="https://dirkscholte.github.io/" target="_blank" rel="noopener">Dirk Scholte</a> — Postdoc</li>
+      <li>Cecilia Bondestam — PhD student</li>
+      <li>Evan Jones — PhD student</li>
+    </ul>
+    <h3 class="subheading">Past</h3>
+    <ul class="group-list">
+      <li>Thomas Stanton — PhD student → Postdoc, IfA Edinburgh</li>
+      <li>Ryan Begley — PhD student → Öpik Research Fellow, AOP</li>
+      <li><a href="https://arellanocordovakarla.com/" target="_blank" rel="noopener">Karla Arellano-Córdova</a> — Postdoc → Postdoc, CEFCA Teruel</li>
+    </ul>
+  </section>
+
+  <section id="studentships">
+    <h2>Studentships &amp; Fellowships</h2>
+    <h3 class="subheading">PhD studentships</h3>
+    <p class="interest-note">Each year the IfA advertises PhD studentship opportunities, usually listed in November/December with applications due the following January. If any of the topics above are of interest, please feel free to get in touch — you can also check whether I currently have a project on offer via the IfA's <a href="https://ifa.roe.ac.uk/phds-jobs-fellowships/phd-studentships" target="_blank" rel="noopener">PhD &amp; Research studentships</a> page.</p>
+    <h3 class="subheading" style="margin-top:28px;">Fellowship Opportunities</h3>
+    <p class="interest-note">Each year there are also a number of postdoctoral fellowship opportunities. Most of these are subject to internal selection, and the internal deadlines fall well ahead of the official fellowship deadlines, so early contact is encouraged. If you're interested in applying for a fellowship at Edinburgh, please feel free to get in touch for information and advice — further details can be found on the <a href="https://ifa.roe.ac.uk/phds-jobs-fellowships/fellowship-opportunities" target="_blank" rel="noopener">IfA Fellowships</a> page.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="link-grid">
+      <div class="pub-row" style="border-top:none; border-bottom:none;">
+        <span class="label">email</span>
+        <span class="sub-links"><span>fergus [.] cullen [at] ed.ac.uk</span></span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Fergus Cullen · Institute for Astronomy, University of Edinburgh</p>
+</footer>
+
+<script>
+  (function(){
+    var sideLinks = document.querySelectorAll('nav.side-nav a');
+    if(!sideLinks.length) return;
+    var sections = Array.prototype.map.call(sideLinks, function(a){
+      return document.querySelector(a.getAttribute('href'));
+    }).filter(Boolean);
+
+    var setActive = function(id){
+      sideLinks.forEach(function(a){
+        a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+      });
+    };
+
+    if('IntersectionObserver' in window){
+      var observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
+            setActive(entry.target.id);
+          }
+        });
+      }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+      sections.forEach(function(s){ observer.observe(s); });
+    }
+  })();
+
+  (function(){
+    var nav = document.querySelector('nav.side-nav');
+    var header = document.querySelector('header.hero');
+    if(!nav || !header) return;
+    var GAP = 32;
+    var mq = window.matchMedia('(min-width: 1150px)');
+    var scheduled = false;
+
+    function positionNav(){
+      scheduled = false;
+      if(!mq.matches){
+        nav.style.top = '';
+        nav.style.transform = '';
+        return;
+      }
+      var headerBottom = header.getBoundingClientRect().bottom;
+      var navHeight = nav.offsetHeight;
+      var viewportH = window.innerHeight;
+      var minTop = Math.max(GAP, headerBottom + GAP);
+      var idealTop = (viewportH - navHeight) / 2;
+      var top = Math.max(idealTop, minTop);
+      nav.style.top = top + 'px';
+      nav.style.transform = 'none';
+    }
+
+    function schedule(){
+      if(scheduled) return;
+      scheduled = true;
+      window.requestAnimationFrame(positionNav);
+    }
+
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    if(mq.addEventListener){ mq.addEventListener('change', schedule); }
+    positionNav();
+  })();
+</script>
+
+</body>
+</html>
