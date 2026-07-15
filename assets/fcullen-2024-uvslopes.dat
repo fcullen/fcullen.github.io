@@ -1,4 +1,4 @@
-#id                          beta  beta_uerr  beta_lerr        z   z_uerr   z_lerr      muv  muv_uerr  muv_lerr
+# id                          beta  beta_uerr  beta_lerr        z   z_uerr   z_lerr      muv  muv_uerr  muv_lerr
 RXJ-2129-3021681            -2.56       0.27       0.42     8.98     1.12     0.55   -19.97      0.10      0.16
 RXJ-2129-16261              -2.48       0.25       0.32     9.12     0.87     0.40   -20.24      0.09      0.12
 CEERS-570                   -3.86       0.90       1.12    10.91     0.43     0.60   -19.89      0.25      0.12
